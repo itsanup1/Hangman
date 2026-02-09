@@ -1,6 +1,10 @@
+import {HangmanDrawing} from './Components/HangmanDrawing'
+
 function App(){
     return(
-        <div>Hello</div>
+        <div className=" h-screen w-screen relative flex justify-center items-center">
+            <HangmanDrawing/>
+        </div>
     );
     
 }
