@@ -1,9 +1,10 @@
 import {HangmanDrawing} from './Components/HangmanDrawing'
-
+import {Keyboard} from './Components/Keyboard'
 function App(){
     return(
-        <div className=" h-screen w-screen relative flex justify-center items-center">
+        <div className="flex flex-col gap-20 justify-center items-center">
             <HangmanDrawing/>
+            <Keyboard/>
         </div>
     );
     
