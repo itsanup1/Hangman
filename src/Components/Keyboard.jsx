@@ -1,32 +1,14 @@
 export function Keyboard(){
+    const keys = [
+    "a","b","c","d","e","f","g","h","i","j","k","l","m",
+    "n","o","p","q","r","s","t","u","v","w","x","y","z"
+    ];
+    const Active = true;
     return(
         <div className="flex gap-4 justify-center items-center relative flex-wrap">
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">A</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">B</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">C</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">D</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">E</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">F</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">G</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">H</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">I</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">J</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">K</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">L</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">M</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">N</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">O</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">P</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">Q</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">R</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">S</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">T</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">U</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">V</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">W</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">X</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">Y</div>
-            <div className="h-16 w-16 border-4 flex items-center justify-center text-2xl">Z</div>
+            {keys.map((key)=>
+                <button key={key} disabled={!Active} className="border-2 h-16 w-16 text-2xl uppercase disabled:opacity-40 bg-gray-200 focus:bg-white hover:bg-blue-400">{key}</button>
+            )}
         </div>
     );
 }

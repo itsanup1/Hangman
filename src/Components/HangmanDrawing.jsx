@@ -1,4 +1,4 @@
-export function HangmanDrawing() {
+export function HangmanDrawing({numberofGuesses}) {
   const HEAD = (
       <div className="absolute rounded-full border-12 h-20 w-20 right-[-160px] top-14"/>
   )
@@ -24,18 +24,15 @@ export function HangmanDrawing() {
       
   )
   
+  const BodyParts = [HEAD,TORSO,LEFT_HAND,RIGHT_HAND,LEFT_LEG,RIGHT_LEG];
+  
   return (
     <div className="relative flex flex-col w-[250px] m-auto mt-40">
       
       {/*Rope */}
       <div className="absolute top-0 right-[-124px] h-14 w-2 bg-black" />
       
-      {HEAD}
-      {TORSO}
-      {LEFT_HAND}
-      {RIGHT_HAND}
-      {LEFT_LEG}
-      {RIGHT_LEG}
+      {BodyParts.slice(0,numberofGuesses)}
       
       {/* Top Bar */}
       <div className="h-2 w-[250px] ml-[121px] bg-black" />
