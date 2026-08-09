@@ -1,42 +1,25 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Small visual fallbacks for utilities used in components (preserve original look)
+   These ensure the underline thickness and some sizing exist even if Tailwind isn't present.
+*/
+
+.border-b-6{
+  border-bottom-width:6px;
+  border-bottom-style:solid;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Make sure the inline flex letter boxes have a consistent width/height on plain CSS */
+.flex .w-10{ /* this is a mild fallback if Tailwind not applied */
+  width:40px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.h-26{height:104px}
+.h-36{height:144px}
+.h-20{height:80px}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* small responsive tweak */
+@media (max-width:640px){
+  .text-6xl{font-size:2.5rem}
+  .w-10{width:36px}
+  .h-16{height:56px}
+  .w-16{width:56px}
 }
